@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Webinário gratuito de Harmonização Facial | Dra. Mariane Botti e Dr. Loan Tomiello</title>
-<meta name="description" content="Webinário gratuito e ao vivo, dias 18 e 19/11 às 20h, para profissionais que fazem harmonização facial. Análise de casos reais e apresentação da mentoria com a Dra. Mariane Botti e o Dr. Loan Tomiello.">
-<meta property="og:title" content="Webinário gratuito: a técnica certa pra se tornar referência em harmonização facial">
+<title>Aula gratuita de Harmonização Facial | Dra. Mariane Botti e Dr. Loan Tomiello</title>
+<meta name="description" content="Aula gratuita e ao vivo, dias 18 e 19/11 às 20h, para profissionais que fazem harmonização facial. Análise de casos reais e apresentação da mentoria com a Dra. Mariane Botti e o Dr. Loan Tomiello.">
+<meta property="og:title" content="Aula gratuita: a técnica certa pra se tornar referência em harmonização facial">
 <meta property="og:description" content="Ao vivo, dias 18 e 19/11 às 20h. O link da aula sai no grupo do WhatsApp.">
 <meta property="og:image" content="img/editorial.jpg">
 <meta name="theme-color" content="#ffffff">
@@ -307,23 +307,65 @@ mark,.hl > span{background:var(--gold);color:inherit;border-radius:.16em;padding
 .h-data b{font-weight:500;font-size:clamp(19px,1.9vw,24px);letter-spacing:-.02em;color:#8A6520}
 .h-data span{font-size:14px;color:var(--mut)}
 .meio-cta{text-align:center;margin-top:clamp(34px,5vw,56px);padding:0 var(--pad)}
+
+/* ===== aula: estrutura nova ===== */
+.dom.num{counter-reset:dn}
+.dom.num > div{counter-increment:dn}
+.dom.num h3::before{content:counter(dn,decimal-leading-zero);width:auto;height:auto;background:none;font-size:13px;font-weight:500;letter-spacing:.08em;color:#B98C3C;margin-bottom:14px}
+.aprende-fim{margin-top:30px;color:var(--mut);font-size:17px;max-width:34em}
+.casos-p{color:var(--mut);font-size:18px;max-width:32em;margin-top:18px}
+.ba-track{display:flex;gap:14px;overflow-x:auto;scrollbar-width:none;margin-top:44px;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;touch-action:pan-x pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.ba-track::-webkit-scrollbar{display:none}
+.ba-track.pegando,.ba-track.pegando .ba-item{cursor:grabbing}
+.ba-track img{-webkit-user-drag:none;pointer-events:none}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-radius:var(--r);overflow:hidden;background:#fff}
+.pair div{position:relative;aspect-ratio:3/4;background:var(--soft);overflow:hidden}
+.pair img{width:100%;height:100%;object-fit:cover;display:block}
+.pair span{position:absolute;left:10px;bottom:10px;font-size:12px;font-weight:500;background:#fff;color:var(--ink);padding:5px 11px;border-radius:999px}
+.pair div + div span,.pair.solo span{background:var(--ink);color:#fff}
+.pair.solo{grid-template-columns:1fr}
+.ba-item{flex:0 0 auto;margin:0;cursor:zoom-in}
+.ba-item.pair{height:clamp(240px,44vh,440px);aspect-ratio:3/2}
+.ba-item.pair.solo{aspect-ratio:3/4}
+#lb{position:fixed;inset:0;z-index:100;background:rgba(12,12,12,.93);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;cursor:zoom-out}
+#lb.on{opacity:1;visibility:visible}
+#lb .lb-box{width:min(94vw,calc(86vh*1.5));background:transparent;gap:6px;transform:scale(.96);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+#lb.on .lb-box{transform:none}
+#lb .lb-box.solo{width:min(94vw,calc(86vh*.75))}
+#lb .lb-x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:0;background:#fff;color:var(--ink);font-size:22px;line-height:1;cursor:pointer}
+.amostra{padding-top:clamp(40px,6vw,80px)}
+.faq{margin-top:40px;max-width:760px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-size:19px;font-weight:500;letter-spacing:-.01em;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;translate:0 -50%;font-size:24px;font-weight:400;color:#B98C3C;transition:rotate .3s}
+.faq details[open] summary::after{rotate:45deg}
+.faq details p{color:var(--mut);padding:0 0 22px;max-width:40em}
+.cd{display:block;margin-top:8px;font-size:15px;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.cd:empty{display:none}
+.of-data .cd{color:#F4EFE6}
+@media (max-width:860px){
+  .ba-item.pair{height:auto;width:78vw}
+  .ba-item.pair.solo{width:39vw}
+  #lb .lb-box:not(.solo){grid-template-columns:1fr;width:min(94vw,calc(43vh*.75))}
+}
 </style>
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motionOk)document.documentElement.classList.remove('js')},3500)</script>
 </head>
 <body>
 
-<header class="top" id="top"><div class="wrap"><span class="top-t">Webinário gratuito · Harmonização Facial</span></div></header>
+<header class="top" id="top"><div class="wrap"><span class="top-t">Aula gratuita · Harmonização Facial</span></div></header>
 
 <main>
 <section class="hero">
   <div class="wrap hero-g">
     <div>
-      <span class="selo claro" data-r>Webinário gratuito e ao vivo</span>
+      <span class="selo claro" data-r>Aula gratuita e ao vivo</span>
       <h1 class="split">Aplique a técnica certa pra se tornar <mark>referência</mark> e ganhar confiança em harmonização facial</h1>
       <p data-r>Conheça os métodos que te permitem ler a simetria e a proporção de cada rosto e entregar o resultado que faz a paciente voltar e indicar. Com análise de casos reais e a apresentação da nossa mentoria aceleradora.</p>
-      <div class="h-data" data-r><b>18 e 19 de novembro</b><span>quarta e quinta, às 20h, ao vivo</span></div>
+      <div class="h-data" data-r><b>18 e 19 de novembro</b><span>quarta e quinta, às 20h, ao vivo</span><span class="cd" data-cd></span></div>
       <div data-r>
-        <a class="btn ouro" data-wa href="#"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>Quero participar do webinário</a>
+        <a class="btn ouro" data-wa href="#"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>Quero participar da aula</a>
         <div class="sub-cta">É gratuito. O link da aula sai no grupo do WhatsApp.</div>
       </div>
       <div class="assina" data-r>Com Dra. Mariane Botti e Dr. Loan Tomiello</div>
@@ -332,88 +374,50 @@ mark,.hl > span{background:var(--gold);color:inherit;border-radius:.16em;padding
   </div>
 </section>
 
-<section class="sec vsl">
+<section class="sec aprende">
+  <div class="wrap">
+    <span class="kicker" data-r>O que você vai aprender na aula</span>
+    <h2 class="split h2m">Uma noite pra você enxergar o rosto do jeito que a gente enxerga</h2>
+    <div class="dom num">
+      <div data-r><h3>Ler o rosto antes de pegar na seringa</h3><p>A leitura de simetria, proporção e terços da face que a gente faz, mostrada em um caso real do começo ao fim.</p></div>
+      <div data-r><h3>Acertar a marcação</h3><p>Os pontos que mais saem do lugar em quem já aplica, e como corrigir cada um.</p></div>
+      <div data-r><h3>Montar e apresentar o plano full face</h3><p>Como explicar o plano pra paciente entender, confiar e fechar o rosto inteiro.</p></div>
+      <div data-r><h3>Escolher o plano de aplicação</h3><p>A profundidade certa pra cada região e cada produto.</p></div>
+      <div data-r><h3>Agulha ou cânula</h3><p>Quando usar cada uma, em cada região, e por quê.</p></div>
+      <div data-r><h3>Agir numa intercorrência</h3><p>O passo a passo do que fazer, pra você aplicar com tranquilidade.</p></div>
+    </div>
+    <p class="aprende-fim" data-r>No final a gente responde as suas perguntas ao vivo e apresenta a mentoria pra quem quiser ir além.</p>
+  </div>
+</section>
+
+<section class="sec casos">
+  <div class="wrap">
+    <span class="kicker" data-r>Casos feitos por nós</span>
+    <h2 class="split h2m">Resultados que começam na leitura do rosto</h2>
+    <p class="casos-p" data-r>Na aula a gente mostra o raciocínio por trás de um plano como esses. Toque num caso pra ampliar.</p>
+  </div>
+  <div class="ba-track" id="baTrack"></div>
+</section>
+
+<section class="sec vsl amostra">
   <div class="wrap vsl-g">
-    <div class="dep" data-r><video src="video/vsl.mp4" poster="video/vsl.jpg" muted loop playsinline preload="metadata"></video><button class="som" type="button" aria-label="Ativar o som do vídeo"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="off" d="m16 9 5 6m0-6-5 6"/></svg><span>Ativar som</span></button></div>
+    <div class="dep" data-r><video src="video/caso.mp4" poster="video/caso.jpg" muted loop playsinline preload="metadata"></video><button class="som" type="button" aria-label="Ativar o som do vídeo"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="off" d="m16 9 5 6m0-6-5 6"/></svg><span>Ativar som</span></button></div>
     <div>
-      <span class="kicker" data-r>Assista antes de continuar</span>
-      <h2 class="split h2m">Conheça a mentoria em 1 minuto</h2>
-      <p data-r>No webinário a gente abre tudo isso ao vivo, com caso real e espaço pra sua pergunta.</p>
-      <div data-r><a class="btn ouro" data-wa href="#"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>Quero participar do webinário</a></div>
+      <span class="kicker" data-r>Um gostinho da aula</span>
+      <h2 class="split h2m">Um caso acontecendo, em tempo real</h2>
+      <p data-r>É assim que a gente gosta de ensinar: no rosto de verdade, explicando cada decisão enquanto ela acontece.</p>
+      <div data-r><a class="btn ouro" data-wa href="#"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>Quero participar da aula</a></div>
     </div>
   </div>
 </section>
 
 <section class="story escuro">
   <div class="wrap">
-    <span class="kicker" data-r>O próximo nível</span>
-    <p class="words">Você já aplica. Já tem paciente, já tem resultado pra mostrar. [Agora é hora de subir de nível.]</p>
-    <p class="words">Quem se destaca na harmonização enxerga o rosto inteiro antes de pegar a seringa. Lê simetria, proporção e os terços da face, e [sabe o que cada ponto vai entregar.]</p>
-    <p class="words">É esse olhar que faz a paciente confiar no plano completo, voltar pra próxima etapa e [falar o seu nome pras amigas.]</p>
-    <p class="words fim">E esse olhar se treina, com paciente na cadeira e alguém experiente do lado.</p>
+    <span class="kicker" data-r>Pra quem é a aula</span>
+    <p class="words">Pra médicos, dentistas, biomédicos, enfermeiros e farmacêuticos [que já aplicam harmonização.]</p>
+    <p class="words">Se você já tem paciente e resultado pra mostrar, e quer [aplicar com mais segurança] em cada ponto, essa aula foi pensada pra você.</p>
+    <p class="words fim">Você só precisa de uma noite livre e da vontade de enxergar o rosto de outro jeito.</p>
   </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
-    <span class="kicker" data-r>O que você vai dominar</span>
-    <h2 class="split h2m">A técnica por trás de um resultado que chama atenção</h2>
-    <div class="tec">
-    <div class="tec-v" data-r><div class="dep"><video src="video/caso.mp4" poster="video/caso.jpg" muted loop playsinline preload="metadata"></video><button class="som" type="button" aria-label="Ativar o som do vídeo"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="off" d="m16 9 5 6m0-6-5 6"/></svg><span>Ativar som</span></button></div><span class="tec-l">Um caso acontecendo, em tempo real</span></div>
-    <div class="dom">
-      <div data-r><h3>Análise facial</h3><p>Simetria, proporção e os terços da face, pra enxergar o que o rosto pede.</p></div>
-      <div data-r><h3>Planejamento full face</h3><p>O plano completo do rosto, montado por prioridade.</p></div>
-      <div data-r><h3>Planos de aplicação</h3><p>A profundidade certa pra cada região e cada produto.</p></div>
-      <div data-r><h3>Agulha e cânula</h3><p>Quando usar cada uma, e por quê.</p></div>
-      <div data-r><h3>Anatomia aplicada</h3><p>As zonas de risco do rosto, pra aplicar com tranquilidade.</p></div>
-      <div data-r><h3>Preenchimento, toxina e bioestimulador</h3><p>Do lábio ao caso completo, com a sua mão.</p></div>
-    </div>
-    </div>
-  </div>
-</section>
-
-<section class="turn">
-  <div class="wrap">
-    <h2 class="split">Segurança a gente ganha aplicando</h2>
-    <p data-r>Por isso aqui você fica com a seringa na mão e a paciente na cadeira, e a gente fica do lado olhando e dizendo “vai, é aí mesmo”.</p>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap semvid">
-    <div>
-      <span class="kicker" data-r>Como é a mentoria</span>
-      <h2 class="split h2m">Aqui quem aplica é você</h2>
-      <div class="lista">
-        <div data-r><p>Você avalia o rosto e monta o plano.</p></div>
-        <div data-r><p>A gente olha junto antes de qualquer agulha.</p></div>
-        <div data-r><p>Você aplica, e a gente fica do lado do começo ao fim.</p></div>
-        <div data-r><p>Você sai com mais casos feitos pela sua mão.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec escuro">
-  <div class="wrap">
-    <span class="kicker" data-r>O que muda pra você</span>
-    <h2 class="split h2m">Capacitação que aparece na agenda e no faturamento</h2>
-    <div class="ganhos">
-      <div data-r><b>01</b><h3>Você indica o plano completo</h3><p>E entrega, porque domina cada etapa dele.</p></div>
-      <div data-r><b>02</b><h3>A paciente confia, volta e indica</h3><p>Resultado bonito e seguro é o que mais traz paciente nova.</p></div>
-      <div data-r><b>03</b><h3>O faturamento acompanha</h3><p>Harmonização é dos procedimentos de maior valor do consultório. Um full face a mais por semana já muda o seu mês.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec depo">
-  <div class="wrap">
-    <span class="kicker" data-r>Quem já fez a mentoria</span>
-    <h2 class="split h2m">Ouça de quem já passou por aqui</h2>
-  </div>
-  <div class="deps" id="deps" data-r><div class="dep"><video src="video/dep1.mp4" poster="video/dep1.jpg" muted loop playsinline preload="metadata"></video><button class="som" type="button" aria-label="Ativar o som do depoimento 1"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="off" d="m16 9 5 6m0-6-5 6"/></svg><span>Ativar som</span></button></div><div class="dep"><video src="video/dep2.mp4" poster="video/dep2.jpg" muted loop playsinline preload="metadata"></video><button class="som" type="button" aria-label="Ativar o som do depoimento 2"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="off" d="m16 9 5 6m0-6-5 6"/></svg><span>Ativar som</span></button></div><div class="dep"><video src="video/dep3.mp4" poster="video/dep3.jpg" muted loop playsinline preload="metadata"></video><button class="som" type="button" aria-label="Ativar o som do depoimento 3"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="off" d="m16 9 5 6m0-6-5 6"/></svg><span>Ativar som</span></button></div></div>
-  <div class="deps-pts" id="depsPts" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
-  <div class="meio-cta" data-r><a class="btn ouro" data-wa href="#"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>Quero participar do webinário</a><div class="sub-cta">Gratuito e ao vivo, dias 18 e 19/11 às 20h.</div></div>
 </section>
 
 <section class="sec">
@@ -423,9 +427,9 @@ mark,.hl > span{background:var(--gold);color:inherit;border-radius:.16em;padding
       <figure><div class="portrait" data-clip><img src="img/dr-loan.jpg?v=2" alt="Dr. Loan Tomiello" data-par="7"></div><figcaption data-r>Dr. Loan Tomiello</figcaption></figure>
     </div>
     <div>
-      <span class="kicker" data-r>Quem vai estar do seu lado</span>
+      <span class="kicker" data-r>Quem dá a aula</span>
       <h2 class="split h2m">Dra. Mariane Botti e Dr. Loan Tomiello</h2>
-      <p data-r>A gente faz harmonização há mais de 6 anos e hoje conduz turmas em Porto Alegre e Florianópolis. Na mentoria a gente fica na sala com você, olhando cada ponto. E no webinário somos nós dois dando a aula ao vivo.</p>
+      <p data-r>A gente faz harmonização há mais de 6 anos e conduz turmas em Porto Alegre e Florianópolis. Na aula somos nós dois, ao vivo, mostrando como a gente pensa cada caso.</p>
       <div class="igs" data-r>
         <a class="link" href="https://www.instagram.com/marianebotti/" target="_blank" rel="noopener">@marianebotti</a>
         <a class="link" href="https://www.instagram.com/loantomiello/" target="_blank" rel="noopener">@loantomiello</a>
@@ -434,28 +438,36 @@ mark,.hl > span{background:var(--gold);color:inherit;border-radius:.16em;padding
   </div>
 </section>
 
+<section class="sec faq-s">
+  <div class="wrap">
+    <span class="kicker" data-r>Antes de entrar</span>
+    <h2 class="split h2m">Perguntas rápidas</h2>
+    <div class="faq">
+      <details data-r><summary>A aula é gratuita?</summary><p>Sim. Você entra no grupo do WhatsApp e recebe o link da aula sem pagar nada.</p></details>
+      <details data-r><summary>Como eu recebo o link?</summary><p>Pelo grupo do WhatsApp. A gente manda o link da aula e um lembrete antes de começar.</p></details>
+      <details data-r><summary>Quem pode participar?</summary><p>Profissionais habilitados pelo seu conselho de classe pra fazer harmonização facial: médicos, dentistas, biomédicos, enfermeiros e farmacêuticos.</p></details>
+      <details data-r><summary>Vai ter venda no final?</summary><p>No final a gente apresenta a mentoria pra quem quiser ir além. Entrar é uma escolha sua, e a aula vale por si só.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="grupo escuro">
   <div class="wrap">
     <div class="oferta" data-r>
       <div class="of-esq">
-        <span class="selo">Webinário gratuito e ao vivo</span>
+        <span class="selo">Aula gratuita e ao vivo</span>
         <h2 class="split">Como se tornar o profissional de harmonização que as pacientes <mark>procuram pelo nome</mark></h2>
-        <div class="of-data"><b>18 e 19 de novembro</b><span>quarta e quinta, às 20h, ao vivo</span></div>
-        <p class="of-p">Uma aula com a Dra. Mariane Botti e o Dr. Loan Tomiello, pra você decidir com calma se a mentoria é pra você.</p>
-        <a class="btn ouro" data-wa href="#"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>Quero participar do webinário</a>
-        <div class="sub-cta">O link da aula sai no grupo do WhatsApp.</div>
+        <div class="of-data"><b>18 e 19 de novembro</b><span>quarta e quinta, às 20h, ao vivo</span><span class="cd" data-cd></span></div>
+        <p class="of-p">Uma aula com a Dra. Mariane Botti e o Dr. Loan Tomiello, ao vivo e sem custo.</p>
+        <a class="btn ouro" data-wa href="#"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>Quero participar da aula</a>
       </div>
       <div class="of-dir">
-        <span class="of-t">O que a gente vai abrir na aula</span>
+        <span class="of-t">Como você entra na aula</span>
         <ol class="of-l">
-          <li><b>A leitura de rosto que a gente faz antes de pegar na seringa,</b> mostrada em um caso real, do começo ao fim.</li>
-          <li><b>Os erros de marcação que mais aparecem em quem já aplica,</b> e como corrigir cada um.</li>
-          <li><b>Como apresentar o plano full face</b> pra paciente entender, confiar e fechar o plano inteiro.</li>
-          <li><b>O que fazer quando acontece uma intercorrência,</b> passo a passo, pra você aplicar tranquilo.</li>
-          <li><b>A conta da mentoria:</b> quantos procedimentos pagam o seu investimento.</li>
-          <li><b>A prática por dentro:</b> as pacientes, os produtos e o que você aplica com a gente do lado.</li>
+          <li><b>Toque no botão</b> e entre no grupo do WhatsApp.</li>
+          <li><b>No dia, o link da aula chega no grupo,</b> junto com um lembrete.</li>
+          <li><b>Às 20h você entra e assiste ao vivo,</b> com espaço pra fazer as suas perguntas.</li>
         </ol>
-        <p class="of-fim">No final a gente responde as suas perguntas ao vivo e passa as datas da próxima turma.</p>
       </div>
     </div>
   </div>
@@ -464,10 +476,12 @@ mark,.hl > span{background:var(--gold);color:inherit;border-radius:.16em;padding
 
 <footer class="foot">
   <img src="img/logo-nos-completo.png" alt="NÓS Núcleo de Odontologia e Saúde">
-  <div class="wrap">Mentoria para profissionais habilitados pelo seu conselho de classe.</div>
+  <div class="wrap">Aula para profissionais habilitados pelo seu conselho de classe.</div>
 </footer>
 
-<a class="fab" data-wa href="#" aria-label="Entrar no grupo do WhatsApp"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg><span class="t">Webinário gratuito</span></a>
+<div id="lb" role="dialog" aria-label="Caso ampliado"><button class="lb-x" type="button" aria-label="Fechar">×</button><div class="lb-box pair"></div></div>
+
+<a class="fab" data-wa href="#" aria-label="Entrar no grupo do WhatsApp"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg><span class="t">Aula gratuita</span></a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47a9.4 9.4 0 0 1 6.7 2.78 9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.48-9.47 9.48zM20.1 3.9A11.33 11.33 0 0 0 12.04.55C5.76.55.65 5.66.65 11.94c0 2.01.52 3.97 1.52 5.7L.55 23.5l6-1.57a11.36 11.36 0 0 0 5.48 1.4h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></symbol>
@@ -483,7 +497,7 @@ const CONFIG = {
   // Enquanto estiver vazio, os botões abrem uma conversa com o número abaixo.
   grupo: '',
   whatsapp: '554884195309',
-  mensagem: 'Olá! Quero participar do webinário gratuito de harmonização facial'
+  mensagem: 'Olá! Quero participar da aula gratuita de harmonização facial'
 };
 /* =================================== */
 
@@ -546,6 +560,70 @@ deps.forEach((d, i) => {
 });
 
 // topo e botão flutuante
+
+// casos: carrossel que gira sozinho, aceita dedo e mouse e amplia ao tocar (mesmo da página do paciente modelo)
+const CASOS = ['06','08',{a:'n3',d:'n4'},'05',{d:'n1'},'01','13',{a:'n5',d:'n6'},'11',{a:'n7',d:'n2'},'02','07','14','12','03','09','10'];
+const meia = (f, t) => `<div><img src="img/casos/${f}.jpg" alt="${t} do procedimento" decoding="async"><span>${t}</span></div>`;
+const parHTML = c => typeof c === 'string' ? meia(`c${c}_a`,'Antes') + meia(`c${c}_d`,'Depois') : (c.a ? meia(c.a,'Antes') : '') + meia(c.d,'Depois');
+const baTrack = document.getElementById('baTrack');
+const baHTML = CASOS.map(c => `<figure class="ba-item pair${c.d && !c.a ? ' solo' : ''}">${parHTML(c)}</figure>`).join('');
+baTrack.innerHTML = baHTML + baHTML;
+(function carrossel(){
+  const VEL = 28;
+  let pos = 0, last = performance.now(), pausaAte = 0, tocando = false, arrasto = null, moveu = false;
+  const meio = () => baTrack.scrollWidth / 2 + 7;
+  const agora = () => performance.now();
+  baTrack.addEventListener('touchstart', () => { tocando = true; }, {passive:true});
+  ['touchend','touchcancel'].forEach(e => baTrack.addEventListener(e, () => { tocando = false; pausaAte = agora() + 2500; }, {passive:true}));
+  baTrack.addEventListener('scroll', () => { if (Math.abs(baTrack.scrollLeft - pos) > 3) { pos = baTrack.scrollLeft; pausaAte = Math.max(pausaAte, agora() + 1800); } }, {passive:true});
+  baTrack.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse' || e.button) return; arrasto = {x:e.clientX, s:baTrack.scrollLeft}; moveu = false; });
+  window.addEventListener('pointermove', e => { if (!arrasto) return; const dx = e.clientX - arrasto.x; if (Math.abs(dx) > 5) { moveu = true; baTrack.classList.add('pegando'); } if (moveu) { let v = arrasto.s - dx; const m = meio(); if (v < 0) { v += m; arrasto.s += m; } else if (v >= m) { v -= m; arrasto.s -= m; } baTrack.scrollLeft = pos = v; } });
+  window.addEventListener('pointerup', () => { if (!arrasto) return; arrasto = null; baTrack.classList.remove('pegando'); pausaAte = agora() + 1800; });
+  const lb = document.getElementById('lb'), lbBox = lb.querySelector('.lb-box');
+  function abrir(fig){
+    lbBox.className = 'lb-box pair' + (fig.classList.contains('solo') ? ' solo' : '');
+    lbBox.innerHTML = fig.innerHTML;
+    lb.classList.add('on'); document.documentElement.style.overflow = 'hidden';
+    if (window.__lenis) window.__lenis.stop();
+  }
+  function fechar(){ lb.classList.remove('on'); document.documentElement.style.overflow = ''; if (window.__lenis) window.__lenis.start(); pausaAte = agora() + 1200; }
+  baTrack.addEventListener('click', e => { if (moveu) { moveu = false; return; } const fig = e.target.closest('.ba-item'); if (fig) abrir(fig); });
+  lb.addEventListener('click', fechar);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && lb.classList.contains('on')) fechar(); });
+  const parado = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function passo(t){
+    const dt = Math.min(64, t - last); last = t;
+    const m = meio(), livre = !tocando && !arrasto && !lb.classList.contains('on');
+    if (livre && baTrack.scrollLeft >= m) { baTrack.scrollLeft -= m; pos = baTrack.scrollLeft; }
+    if (livre && !parado && t > pausaAte) {
+      if (Math.abs(baTrack.scrollLeft - pos) > 3) pos = baTrack.scrollLeft;
+      pos += VEL * dt / 1000;
+      if (pos >= m) pos -= m;
+      baTrack.scrollLeft = pos;
+    }
+    requestAnimationFrame(passo);
+  }
+  requestAnimationFrame(passo);
+})();
+
+// contagem regressiva até a próxima aula (horário de Brasília)
+const AULAS = [new Date('2026-11-18T20:00:00-03:00'), new Date('2026-11-19T20:00:00-03:00')], DURACAO = 2 * 3600e3;
+const dois = n => String(n).padStart(2, '0');
+function contagem(){
+  const agora = Date.now(), prox = AULAS.find(a => agora < a.getTime() + DURACAO);
+  let t = '';
+  if (!prox) t = '';
+  else if (agora >= prox.getTime()) t = 'Ao vivo agora';
+  else {
+    let r = Math.floor((prox.getTime() - agora) / 1000);
+    const d = Math.floor(r / 86400); r %= 86400;
+    const h = Math.floor(r / 3600), m = Math.floor(r % 3600 / 60), sec = r % 60;
+    t = 'Próxima aula em ' + (d ? d + 'd ' : '') + dois(h) + 'h ' + dois(m) + 'min ' + dois(sec) + 's';
+  }
+  document.querySelectorAll('[data-cd]').forEach(el => el.textContent = t);
+}
+contagem(); setInterval(contagem, 1000);
+
 const fab = document.querySelector('.fab'), topBar = document.getElementById('top');
 function onScroll(){
   const y = window.scrollY;
