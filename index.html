@@ -357,6 +357,22 @@ mark,.hl > span{background:var(--gold);color:inherit;border-radius:.16em;padding
 .btn.ouro{--grad-btn:linear-gradient(100deg,#B08640 0%,#8F6727 45%,#A57A34 75%,#C49A50 100%);background:var(--grad-btn);background-size:220% 100%;color:#fff;text-shadow:0 1px 1px rgba(60,40,10,.35)}
 .btn.ouro:hover{background:var(--grad-btn);background-size:220% 100%}
 .btn.ouro svg{fill:#fff}
+/* card convite centralizado */
+.grupo .wrap{max-width:980px}
+.oferta{grid-template-columns:1fr;gap:0;text-align:center;padding:clamp(34px,5.5vw,72px) clamp(22px,5vw,72px) clamp(28px,4vw,48px)}
+.of-esq{display:flex;flex-direction:column;align-items:center}
+.oferta .selo{margin-bottom:22px}
+.grupo h2{max-width:20em;margin:0 auto;font-size:clamp(28px,3.4vw,46px);line-height:1.1}
+.of-data{align-items:center;text-align:center;margin:30px auto 0;width:min(100%,420px)}
+.of-p{margin:22px auto 30px;max-width:32em}
+.grupo .btn.ouro{padding-left:34px;padding-right:34px}
+.of-assina{border-top:0;padding-top:0;margin-top:10px}
+.of-dir{margin-top:clamp(36px,5vw,52px);padding-top:clamp(28px,4vw,40px);border-top:1px solid rgba(227,194,119,.22)}
+.of-t{text-align:center;margin-bottom:22px}
+.of-l{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.of-l li{padding:22px 18px 20px;border:1px solid rgba(244,239,230,.1);border-radius:16px;background:rgba(255,255,255,.03);text-align:center;font-size:15px}
+.of-l li::before{position:static;display:flex;align-items:center;justify-content:center;width:34px;height:34px;margin:0 auto 12px;border-radius:50%;border:1px solid rgba(227,194,119,.45);-webkit-text-fill-color:#EBD08F;background:none;color:#EBD08F}
+@media (max-width:860px){.of-l{grid-template-columns:1fr}.of-l li{padding:18px 16px}}
 </style>
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motionOk)document.documentElement.classList.remove('js')},3500)</script>
 </head>
@@ -446,19 +462,6 @@ mark,.hl > span{background:var(--gold);color:inherit;border-radius:.16em;padding
   </div>
 </section>
 
-<section class="sec faq-s">
-  <div class="wrap">
-    <span class="kicker" data-r>Antes de entrar</span>
-    <h2 class="split h2m">Perguntas rápidas</h2>
-    <div class="faq">
-      <details data-r><summary>A aula é gratuita?</summary><p>Sim. Você entra no grupo do WhatsApp e recebe o link da aula sem pagar nada.</p></details>
-      <details data-r><summary>Como eu recebo o link?</summary><p>Pelo grupo do WhatsApp. A gente manda o link da aula e um lembrete antes de começar.</p></details>
-      <details data-r><summary>Quem pode participar?</summary><p>Profissionais habilitados pelo seu conselho de classe pra fazer harmonização facial: médicos, dentistas, biomédicos, enfermeiros e farmacêuticos.</p></details>
-      <details data-r><summary>Vai ter venda no final?</summary><p>No final a gente apresenta a mentoria pra quem quiser ir além. Entrar é uma escolha sua, e a aula vale por si só.</p></details>
-    </div>
-  </div>
-</section>
-
 <section class="grupo escuro">
   <div class="wrap">
     <div class="oferta" data-r>
@@ -479,6 +482,19 @@ mark,.hl > span{background:var(--gold);color:inherit;border-radius:.16em;padding
           <li><b>Às 20h você entra e assiste ao vivo,</b> com espaço pra fazer as suas perguntas.</li>
         </ol>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq-s">
+  <div class="wrap">
+    <span class="kicker" data-r>Antes de entrar</span>
+    <h2 class="split h2m">Perguntas rápidas</h2>
+    <div class="faq">
+      <details data-r><summary>A aula é gratuita?</summary><p>Sim. Você entra no grupo do WhatsApp e recebe o link da aula sem pagar nada.</p></details>
+      <details data-r><summary>Como eu recebo o link?</summary><p>Pelo grupo do WhatsApp. A gente manda o link da aula e um lembrete antes de começar.</p></details>
+      <details data-r><summary>Quem pode participar?</summary><p>Profissionais habilitados pelo seu conselho de classe pra fazer harmonização facial: médicos, dentistas, biomédicos, enfermeiros e farmacêuticos.</p></details>
+      <details data-r><summary>Vai ter venda no final?</summary><p>No final a gente apresenta a mentoria pra quem quiser ir além. Entrar é uma escolha sua, e a aula vale por si só.</p></details>
     </div>
   </div>
 </section>
